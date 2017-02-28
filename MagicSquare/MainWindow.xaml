@@ -1,0 +1,88 @@
+﻿<Controls:MetroWindow x:Class="MagicSquare.MainWindow"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MagicSquare"
+        mc:Ignorable="d"
+        Title="Magic Square" Height="424" Width="525">
+    <Controls:MetroWindow.RightWindowCommands>
+        <Controls:WindowCommands>
+            <Button Content="settings" />
+            <Button>
+                <StackPanel Orientation="Horizontal">
+                    <Rectangle Width="20" Height="20" Fill="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}">
+                        <Rectangle.OpacityMask>
+                            <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_cupcake}" />
+                        </Rectangle.OpacityMask>
+                    </Rectangle>
+                    <TextBlock Margin="4 0 0 0" VerticalAlignment="Center" Text="deploy cupcakes" />
+                </StackPanel>
+            </Button>
+        </Controls:WindowCommands>
+    </Controls:MetroWindow.RightWindowCommands>
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*" />
+            <RowDefinition Height="46*" />
+            <RowDefinition Height="46" />
+            <RowDefinition Height="46*"/>
+            <RowDefinition Height="56*"/>
+            <RowDefinition Height="54*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="55*" />
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="90*" />
+            <ColumnDefinition Width="90*" />
+            <ColumnDefinition Width="90*"/>
+            <ColumnDefinition Width="90*"/>
+            <ColumnDefinition Width="90*"/>
+            <ColumnDefinition Width="90*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="button" Content="A" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Width="86" Height="46" VerticalAlignment="Top"/>
+        <Button x:Name="button1" Content="B" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Right" Width="86" Height="46" VerticalAlignment="Top"/>
+        <Button x:Name="button2" Content="C" Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="86" Height="46" Grid.Row="1"/>
+        <Button x:Name="button3" Content="D" Grid.Column="4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="86" Height="46" Grid.Row="1"/>
+        <Button x:Name="button4" Content="Button" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="86" Height="46"/>
+        <Button x:Name="button5" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="86" Grid.Column="1" Grid.Row="4" Height="46"/>
+        <Button x:Name="button6" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="86" Grid.Column="1" Grid.Row="3" Height="46" Margin="0,1,0,0" Grid.RowSpan="2"/>
+        <Button x:Name="button7" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="86" Grid.Column="3" Grid.Row="2" Height="46"/>
+        <Button x:Name="button8" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="86" Grid.Column="2" Grid.Row="2" Height="46"/>
+        <Button x:Name="button9" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="86" Grid.Column="4" Grid.Row="2" Height="46"/>
+        <Button x:Name="button10" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="86" Grid.Column="3" Grid.Row="4" Height="46"/>
+        <Button x:Name="button11" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="86" Grid.Column="3" Grid.Row="3" Height="46" Margin="0,1,0,0" Grid.RowSpan="2"/>
+        <Button x:Name="button12" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="86" Grid.Column="2" Grid.Row="4" Height="46"/>
+        <Button x:Name="button13" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="86" Grid.Column="2" Grid.Row="3" Height="46" Margin="0,1,0,0" Grid.RowSpan="2"/>
+        <Button x:Name="button14" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="86" Grid.Column="4" Grid.Row="4" Height="46"/>
+        <Button x:Name="button15" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="86" Grid.Column="4" Grid.Row="3" Height="46" Margin="0,1,0,0" Grid.RowSpan="2"/>
+        <Image Source="{StaticResource tomat}" Grid.Column="1" HorizontalAlignment="Left" Height="46" Grid.Row="7" VerticalAlignment="Top" Width="86"/>
+        <Image Source="{StaticResource tomat}" Grid.Column="2" HorizontalAlignment="Left" Height="46" Grid.Row="7" VerticalAlignment="Top" Width="86"/>
+        <Image Source="{StaticResource tomat}" Grid.Column="3" HorizontalAlignment="Left" Height="46" Grid.Row="7" VerticalAlignment="Top" Width="86"/>
+        <Image Source="{StaticResource tomat}" Grid.Column="4" HorizontalAlignment="Left" Height="46" Grid.Row="7" VerticalAlignment="Top" Width="86"/>
+        <Button x:Name="button16" HorizontalAlignment="Left" VerticalAlignment="Top" Width="68" Grid.Column="4" Margin="18,27,0,0" Grid.Row="5" Height="27">
+            <StackPanel Orientation="Horizontal">
+                <Rectangle Width="20" Height="20" Fill="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}">
+                    <Rectangle.OpacityMask>
+                        <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_clean}" />
+                    </Rectangle.OpacityMask>
+                </Rectangle>
+                <TextBlock Margin="4 0 0 0" VerticalAlignment="Center" Text="" />
+            </StackPanel>
+        </Button>
+        <Button x:Name="button17" Content="9" HorizontalAlignment="Left" VerticalAlignment="Top" Width="69" Grid.Column="3" Margin="35,27,0,0" Grid.Row="5" Grid.ColumnSpan="2" Height="27"/>
+        <Button x:Name="button18" Content="8" HorizontalAlignment="Left" VerticalAlignment="Top" Width="69" Grid.Column="2" Margin="52,27,0,0" Grid.Row="5" Grid.ColumnSpan="2" Height="27"/>
+        <Button x:Name="button19" Content="7" HorizontalAlignment="Left" VerticalAlignment="Top" Width="69" Grid.Column="1" Margin="69,27,0,0" Grid.Row="5" Grid.ColumnSpan="2" Height="27"/>
+        <Button x:Name="button20" Content="6" HorizontalAlignment="Left" VerticalAlignment="Top" Width="69" Grid.Column="1" Margin="0,27,0,0" Grid.Row="5" Height="27"/>
+        <Button x:Name="button21" Content="5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="68" Grid.Column="4" Grid.Row="5" Margin="18,0,0,0" Height="27"/>
+        <Button x:Name="button22" Content="4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="69" Grid.Column="3" Grid.Row="5" Margin="35,0,0,0" Grid.ColumnSpan="2" Height="27"/>
+        <Button x:Name="button23" Content="3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="69" Grid.Column="2" Margin="52,0,0,0" Grid.Row="5" Grid.ColumnSpan="2" Height="27"/>
+        <Button x:Name="button24" Content="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="69" Grid.Column="1" Grid.Row="5" Margin="69,0,0,0" Grid.ColumnSpan="2" Height="27"/>
+        <Button x:Name="button25" Content="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="69" Grid.Column="1" Grid.Row="5" Height="27"/>
+        <Label x:Name="label" Content="D + 2" Grid.Column="1" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="0,10,0,0" Grid.Row="6" VerticalAlignment="Top" Grid.ColumnSpan="4" Width="344"/>
+    </Grid>
+</Controls:MetroWindow>
